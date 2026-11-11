@@ -1,0 +1,1 @@
+Coloca aquí inundaciones.geojson y movimientos_masa.geojson (EPSG:4326) una vez validados y optimizados.

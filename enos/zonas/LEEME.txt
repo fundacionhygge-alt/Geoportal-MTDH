@@ -1,0 +1,35 @@
+GEOPORTAL ENOS - MÓDULO ZONAS SUSCEPTIBLES
+Versión de revisión técnica - 08/11/2026
+
+CÓMO ABRIR
+1. Extraer todo el ZIP en una carpeta.
+2. Abrir la carpeta en Visual Studio Code.
+3. Abrir index.html con Live Server.
+4. Mantener la estructura de carpetas y la conexión a Internet para cargar Leaflet y los mapas base.
+
+FUNCIONES IMPLEMENTADAS
+- Alternar inundaciones / movimientos en masa.
+- Provincia, cantón y parroquia encadenados mediante códigos oficiales.
+- Actualización de indicadores y geometrías según territorio, amenaza y categoría.
+- Vista nacional, selección de provincias y restablecimiento completo.
+- 24 provincias, Galápagos incluido, con mensaje explícito cuando falta cobertura.
+- Mapas base claro, relieve y satélite.
+- Cartografía vectorial recortada a parroquias para el detalle provincial; vista nacional rasterizada indicativa.
+
+METODOLOGÍA Y LÍMITES
+- Cartografía administrativa de referencia 2024; 24 provincias, 222 cantones y 1.046 parroquias ordinarias. Se excluyen registros de zonas en estudio y otros no administrativos.
+- Las superficies NO son intersecciones vectoriales exactas: se estiman con rasterización de celdas de 150 x 150 metros (0,0225 km² por celda), asignadas a cada parroquia. Las categorías se ordenan por prioridad cuando existen solapamientos.
+- Inundaciones: 43.058 polígonos originales. Movimientos en masa: 364.732 polígonos de copia simplificada a 25 m.
+- No interpretar SIN / NO APLICABLE como susceptibilidad. El indicador principal las excluye salvo selección explícita de esa categoría.
+- Los resultados son exploratorios, no cifras oficiales validadas; requieren contrastes técnicos con la cartografía fuente antes de difusión institucional.
+- No hay polígonos de amenazas en Galápagos en los archivos suministrados; la interfaz distingue falta de cobertura de riesgo cero.
+- La vista nacional usa imágenes de baja resolución para una navegación rápida; al elegir una provincia se carga detalle vectorial con atributos de provincia, cantón y parroquia.
+- La interfaz se verificó mediante pruebas automatizadas de lógica de filtros y consistencia de archivos. No se logró completar una prueba visual de navegador en el entorno de generación, por lo que no se afirma validación integral en navegador.
+
+DATOS
+capas/territorios.json: jerarquía administrativa
+capas/superficies.json: estimaciones de superficies por parroquia y categoría
+capas/superficies_por_parroquia.csv: tabla para revisión técnica
+capas/{amenaza}/{provincia}.geojson: geometrías de visualización recortadas
+
+Este paquete es una versión funcional de revisión del módulo preventivo Zonas susceptibles, no el geoportal completo con los demás seis módulos.

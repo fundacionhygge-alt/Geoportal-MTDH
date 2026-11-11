@@ -1,0 +1,1 @@
+Módulo preventivo Alojamientos temporales identificados. Fuente: Alojamientos_Temporales.gpkg. Coordenadas y datos sin inferencias. La calificación no acredita activación ni disponibilidad. La visualización muestra círculos provinciales y puntos individuales al seleccionar provincia. Se han excluido registros sin coordenadas válidas.

@@ -1,0 +1,1 @@
+Cambios: separación brigadas/kits; brigadas emergencia filtradas desde 29/08/2026; stock mínimo desde modelo entregado; filtros de exposición dependientes; controles compactos. Pendiente prueba interactiva integral y contraste de kits entregados con fuente original.

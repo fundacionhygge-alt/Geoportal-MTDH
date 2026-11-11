@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Geoportal ENOS | MTDH</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&amp;family=Barlow+Condensed:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/><link href="css/estilos.css" rel="stylesheet"/><style id="enos-executive-v22">
+/* ENOS v22 — institucional azul aprobado, refinamiento ejecutivo */
+:root{--enos-950:#061a36;--enos-900:#09274e;--enos-800:#103c70;--enos-700:#14558e;--enos-600:#1872af;--enos-100:#d9e9f8;--enos-50:#edf5fc}
+html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#dceaf8 0%,#eaf3fc 420px,#f0f6fc 100%)!important;color:#0c315a!important}
+.masthead{background:linear-gradient(115deg,#061a36,#0a3367 62%,#14568b)!important;border-bottom:3px solid #358ac6!important;box-shadow:0 12px 30px #0523492b!important}
+.hero.prevention{background:linear-gradient(125deg,#092b58,#145a99)!important;box-shadow:0 14px 30px #07294a28!important}
+.hero.response{background:linear-gradient(125deg,#071e43,#104579)!important;box-shadow:0 14px 30px #07294a28!important}
+.hero{border:1px solid #a5c8e344!important;border-radius:18px!important}
+.modules button{border-radius:13px!important;border:1px solid #d8edff55!important;background:linear-gradient(155deg,#ffffff22,#ffffff09)!important;min-height:100px;box-shadow:inset 0 1px 0 #ffffff27;transition:background .18s,transform .18s,box-shadow .18s!important}
+.modules button:hover,.modules button.active,.modules button.selected{background:linear-gradient(145deg,#ffffff42,#ffffff1a)!important;transform:translateY(-2px);box-shadow:0 8px 18px #031a3b33!important}
+.module-dashboard,.panel{border:1px solid #b6d3eb!important;border-radius:17px!important;box-shadow:0 8px 26px #0a356015!important}
+.module-dashboard-head{background:linear-gradient(100deg,#0a2e60,#1464a4)!important}
+.module-metrics{gap:12px!important}
+.module-metrics>*,.module-metrics .metric,.module-metrics .kpi{border:1px solid #b8d5ee!important;border-radius:14px!important;background:linear-gradient(140deg,#0b376e,#135b99)!important;color:#fff!important;box-shadow:0 8px 18px #07305c1c!important}
+.module-metrics strong,.module-metrics b,.module-metrics .number,.module-metrics span,.module-metrics small{color:#fff!important}
+#zonas-integradas{background:transparent!important;border:0!important;margin:6px auto 25px!important;max-width:1700px!important}
+#zonas-integradas iframe{height:1300px!important;background:transparent!important;border:0!important}
+@media(max-width:950px){#zonas-integradas iframe{height:1750px!important}}
+
+/* V23 — contraste accesible y superficies exclusivamente azules */
+:root{--bg:#06162d!important;--panel:#0c2c53!important;--txt:#f5faff!important;--muted:#c1d9f0!important}
+html,body{background:linear-gradient(155deg,#06152c 0%,#0c315d 48%,#071d3a 100%)!important;color:#f4f9ff!important}
+.shell,.workspace,#zonas-integradas{background:transparent!important}
+.masthead,.mast-title,.mast-title h1,.mast-title p,.hero,.hero h2,.hero p,.hero .objective,.hero .objective b,.hero .modules button,.hero .modules button span{color:#f6faff!important}
+.mast-title h1 em{color:#91d5ff!important;text-shadow:0 2px 15px #0b3055}
+.hero.prevention{background:linear-gradient(125deg,#0a3263,#145c9a)!important}
+.hero.response{background:linear-gradient(125deg,#071f43,#114b87)!important}
+.hero-heading h2{font-weight:800!important;color:#ffffff!important;text-shadow:0 1px 2px #001b3b}
+.hero-heading p,.hero .objective{color:#d9eaff!important}
+.hero .objective b,.response .objective b{background:#2774b7!important;color:#fff!important}
+.hero .modules{background:#071e3d80!important;border-color:#4b8dc2!important}
+.hero .modules button{background:linear-gradient(160deg,#164778,#0a2a51)!important;border:1px solid #427fb1!important}
+.hero .modules button:hover,.hero .modules button.chosen{background:linear-gradient(145deg,#276fa9,#154578)!important}
+.hero .modules button span{font-weight:800!important}
+.module-dashboard,.panel,.map-wrap{background:linear-gradient(145deg,#103d70,#08264b)!important;color:#f4f9ff!important;border:1px solid #447db0!important}
+.module-dashboard-head,.module-dashboard h3,.module-dashboard p,.module-dashboard span,.panel h3,.panel p,.panel label{color:#f4f9ff!important}
+.module-dashboard-head{background:linear-gradient(100deg,#0c3668,#1a619a)!important}
+.module-metrics>*,.module-metric{background:linear-gradient(145deg,#164f88,#0a2d59)!important;color:#fff!important;border:1px solid #4c92c9!important}
+.module-metrics small,.module-metrics span,.module-metric small,.module-metric span{color:#d5eaff!important}
+.filters select,.filters input,.map-tools select{background:#0c3059!important;color:#fff!important;border:1px solid #6da7d4!important}
+.map-tools,.map-caption,.thematic-legend{background:#092b50ee!important;color:#fff!important}
+.map-tools button,.map-tools select{color:#fff!important}
+.map-wrap{background:#0b3058!important}
+footer{background:#081f3d!important;color:#c9e1f7!important;border-color:#3b729f!important}
+#zonas-integradas iframe{background:#08264a!important}
+</style><style id="enos-v25-polish">
+:root{--soft-edge:#4674a4}
+body{letter-spacing:.005em}
+.hero,.module-dashboard,.panel,.map-wrap{box-shadow:0 4px 18px rgba(1,13,38,.10)!important;border-radius:16px!important}
+.hero{border:1px solid rgba(157,204,255,.17)!important}
+.modules button{border-radius:13px!important;box-shadow:none!important;transition:background .16s ease,border-color .16s ease,transform .16s ease!important}
+.modules button:hover{transform:translateY(-1px)!important}
+.module-metric{border-radius:13px!important;box-shadow:none!important;border:1px solid rgba(162,207,252,.25)!important;padding:16px 18px!important}
+.module-metric strong{font-weight:700!important;letter-spacing:-.025em!important}
+.module-dashboard{padding:20px 24px!important}
+.module-dashboard-head h3{font-weight:700!important}
+.filters select,.filters button,.map-tools button,.map-tools select{border-radius:10px!important;box-shadow:none!important}
+#zonas-integradas{margin:12px 24px 22px!important;border-radius:15px!important;border-color:#315b90!important;background:#142e55!important}
+#zonas-integradas iframe{background:#142e55!important}
+@media(max-width:750px){#zonas-integradas{margin:10px!important}.module-dashboard{padding:14px!important}}
+ .thematic-legend .legend-circle{display:inline-block;flex:0 0 auto;width:var(--dot-size);height:var(--dot-size);border-radius:50%;background:var(--dot-color);border:1px solid #d7ebfc;box-shadow:0 0 0 1px #123b5b;vertical-align:middle;margin:0 10px 0 3px}.thematic-legend .item{display:flex;align-items:center;min-height:28px;gap:6px}.thematic-legend small{display:block;line-height:1.45;margin-top:7px} </style></head><body><header class="masthead"><div class="brand"><img alt="Gobierno del Ecuador y Ministerio de Trabajo y Desarrollo Humano" class="official-logo" src="assets/logo-mtdh-gob.png"/></div><div class="mast-title"><h1>Geoportal <em>ENOS</em></h1><p>Inteligencia territorial · Prevención y respuesta</p></div><div class="dots">● ● ●</div></header><div class="shell"><section class="hero-grid"><article class="hero prevention"><div class="hero-heading"><span class="hero-icon">♢</span><div><h2>Bloque preventivo</h2><p>Análisis de amenazas, exposición y preparación</p></div></div><p class="objective"><b>Objetivo</b> Identificar y anticipar riesgos para orientar acciones de prevención y reducción de impactos.</p><div class="modules" style="grid-template-columns:repeat(auto-fit,minmax(145px,1fr))"><button data-tab="preventivo" data-topic="amenazas"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M2 12c3-3 5-7 10-7s7 4 10 7 7-4 10-7-7-4-10-7z"></path></svg></span><span>Zonas<br/>susceptibles</span></button><button data-tab="preventivo" data-topic="unidades"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M3 21V3h18v18M9 3v18M15 3v18M3 9h18M3 15h18"></path></svg></span><span>Unidades de<br/>atención expuestas</span></button><button data-tab="preventivo" data-topic="poblacion"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><span>Población<br/>potencialmente expuesta</span></button><button data-tab="preventivo" data-topic="alojamientos"><span class="module-icon">⌂</span><span>Alojamientos<br/>temporales identificados</span></button><button data-tab="preventivo" data-topic="proyeccion"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8zM3.3 7 12 12l8.7-5M12 22V12"></path></svg></span><span>Proyección de kits mínimos</span></button></div></article><article class="hero response"><div class="hero-heading"><span class="hero-icon">♧</span><div><h2>Bloque reactivo</h2><p>Atención, asistencia y protección social</p></div></div><p class="objective"><b>Objetivo</b> Monitorear las afectaciones y la respuesta del MTDH en territorio.</p><div class="modules" style="grid-template-columns:repeat(4,minmax(0,1fr))"><button data-tab="reactivo" data-topic="eventos"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M3 3v18h18M7 16l4-5 3 3 6-7"></path></svg></span><span>Eventos y<br/>afectaciones</span></button><button data-tab="reactivo" data-topic="kits"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M10 17h4V5H2v12h3M14 9h4l4 4v4h-3M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4M17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path></svg></span><span>Kits<br/>entregados</span></button><button data-tab="reactivo" data-topic="brigadas"><span class="module-icon">✚</span><span>Brigadas de<br/>emergencia</span></button><button data-tab="reactivo" data-topic="bonos"><span class="module-icon"><svg aria-hidden="true" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="30"><path d="M3 6h18v14H3zM3 10h18M16 15h2"></path></svg></span><span>Bonos de<br/>contingencia</span></button></div></article></section><section aria-live="polite" class="module-dashboard" id="module-dashboard" style="min-height:125px"><div class="module-dashboard-head"><h3 id="module-heading">Zonas susceptibles</h3><span id="module-tag">Septiembre 2026 · fuentes institucionales</span></div><p id="module-description">Explora los indicadores y la cartografía disponibles para cada módulo.</p><div class="module-metrics" id="module-metrics"></div><div class="enos-subcontrols" hidden="" id="enos-subcontrols"></div></section><section class="workspace"><div class="map-wrap"><div class="map-tools" id="map-tools"><button id="home-map" title="Centrar mapa en Ecuador" aria-label="Centrar mapa" type="button">⌖</button><button id="clear-filters" title="Quitar filtros" aria-label="Quitar filtros" type="button">↺</button><label for="basemap-choice">Mapa base</label><select id="basemap-choice"><option value="light">Claro · análisis</option><option value="satellite">Satelital</option><option value="terrain">Relieve</option></select></div><div aria-label="Mapa interactivo de Ecuador" id="map"><div class="map-fallback">Preparando cartografía… Si permanece vacío, revisa la conexión a Leaflet y abre con Live Server.</div></div><div class="map-caption">ECUADOR · SUSCEPTIBILIDAD A INUNDACIONES <span id="map-status">Esperando capas geográficas</span></div><div class="thematic-legend" id="thematic-legend"></div></div><aside class="panel filters">
+<h3>⚑   Filtros territoriales</h3>
+<div class="territorial-grid"><div><label for="province">Provincia</label><select id="province"><option value="">Todas</option></select></div><div><label for="canton">Cantón</label><select id="canton"><option value="">Todos</option></select></div><div><label for="parish">Parroquia</label><select id="parish"><option value="">Todas</option></select></div></div>
+<div class="filter-divider"></div>
+<h3>⚑   Amenaza</h3>
+<select aria-label="Amenaza para el análisis" id="threat-select"><option value="f">Inundaciones</option><option value="l">Movimientos en masa</option></select>
+<div class="filter-divider"></div>
+<div id="unit-controls"><h3>▤   Unidades y exposición</h3>
+<div class="filter-compact-grid"><div><label for="unit-service">Servicio</label><select id="unit-service"><option value="">Todos</option></select></div><div><label for="unit-modality">Modalidad</label><select id="unit-modality"><option value="">Todas</option></select></div></div>
+<div class="filter-compact-grid"><div><label for="exposure-select">Susceptibilidad</label><select id="exposure-select"><option value="">Todas</option></select></div><div class="check-compact"><label class="check"><input id="exposed-only" type="checkbox"/> Solo unidades de atención expuestas</label></div></div>
+</div>
+<div class="filter-divider"></div>
+<div hidden="" id="exposure-bars"></div>
+</aside></section></div><footer>MTDH · Geoportal ENOS · Fuentes y fechas de corte identificadas por módulo · Revisión técnica</footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="js/app.js"></script><script src="js/portal-v17.js"></script><script>
+document.getElementById('clear-filters').addEventListener('click',()=>{
+ for(const id of ['province','canton','parish','unit-service','unit-modality','exposure-select']){
+  const control=document.getElementById(id);if(control)control.value='';
+ }
+ const exposed=document.getElementById('exposed-only');if(exposed)exposed.checked=false;
+ loadProvince('');window.dispatchEvent(new Event('enos:territory'));
+});
+</script></body></html>

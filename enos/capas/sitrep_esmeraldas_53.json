@@ -1,0 +1,74 @@
+{
+  "source": "SITREP provincial Nro. 53, Esmeraldas",
+  "cut": "2026-11-07 18:00",
+  "period_start": "2026-08-29",
+  "province": "ESMERALDAS",
+  "totals": {
+    "eventos": 118,
+    "impactadas": 20669,
+    "afectadas": 15441,
+    "damnificadas": 5228,
+    "familias_afectadas": 4257,
+    "viviendas_afectadas": 4616
+  },
+  "cantons": [
+    {
+      "c": "ESMERALDAS",
+      "eventos": 40,
+      "impactadas": 7955,
+      "afectadas": 7164,
+      "damnificadas": 791
+    },
+    {
+      "c": "ELOY ALFARO",
+      "eventos": 13,
+      "impactadas": 5059,
+      "afectadas": 5059,
+      "damnificadas": 0
+    },
+    {
+      "c": "MUISNE",
+      "eventos": 18,
+      "impactadas": 4500,
+      "afectadas": 116,
+      "damnificadas": 4384
+    },
+    {
+      "c": "QUININDÉ",
+      "eventos": 29,
+      "impactadas": 2518,
+      "afectadas": 2518,
+      "damnificadas": 0
+    },
+    {
+      "c": "SAN LORENZO",
+      "eventos": 9,
+      "impactadas": 544,
+      "afectadas": 491,
+      "damnificadas": 53
+    },
+    {
+      "c": "RIOVERDE",
+      "eventos": 7,
+      "impactadas": 93,
+      "afectadas": 93,
+      "damnificadas": 0
+    },
+    {
+      "c": "ATACAMES",
+      "eventos": 2,
+      "impactadas": 0,
+      "afectadas": 0,
+      "damnificadas": 0
+    }
+  ],
+  "types": {
+    "Inundación": 68,
+    "Deslizamiento": 24,
+    "Hundimiento": 7,
+    "Erosión hídrica": 6,
+    "Lluvias intensas": 6,
+    "Aluvión": 5,
+    "Vendaval": 2
+  }
+}
